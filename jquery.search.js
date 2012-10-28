@@ -14,7 +14,7 @@
     $.widget('jquery.search', {
 
         options: {
-            listItems:     null,
+            list:     null,
             disableSubmit: false
         },
 
@@ -22,8 +22,10 @@
 
             var self = this;
 
+            self.searching = false;
+
             // You gotta specify a list homie.
-            if ( !self.options.listItems ) {
+            if ( !self.options.list ) {
                 throw 'Invalid List Specified';
                 return;
             }
@@ -36,10 +38,14 @@
             }
 
             // Cache the list of searchable items
-            self.items = self.options.listItems;
+            self.items = self.options.list.children();
 
             // Search for the items
             self.element.bind('keyup', function(e){
+                if ( !self.searching ) {
+                    self.searching = true;
+                    self.options.list.addClass('searching');
+                }
                 self.searchItems( self.element.val() );
             });
 
@@ -70,7 +76,15 @@
 
         // Show all items
         reset: function() {
-            this.items.each(function(){
+            var self = this;
+            // Reset searching state
+            self.searching = false;
+
+            // Removing searching hook
+            self.options.list.removeClass('searching');
+
+            // Show all of the items again
+            self.items.each(function(){
                 $(this).show();
             });
         },

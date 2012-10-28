@@ -26,8 +26,8 @@ Configuration
   $(function(){
 
     $('#search-input').search({
-      listItems: $('#awesome-list .item'), // All of the items you wish to be searched
-      disableSubmit: true                  // Disable default action (submit) of parent form
+      list:          $('#awesome-list'), // All of the items you wish to be searched
+      disableSubmit: true                // Disable default action (submit) of parent form
     });
 
   });
