@@ -3,7 +3,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>jQuery Simple Search</title>
-
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    	<meta name="apple-mobile-web-app-capable" content="yes" />
+  	  	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 		<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap-combined.min.css" rel="stylesheet">
 		<style type="text/css">
 		.span6 {
@@ -12,7 +14,7 @@
 		}
 		.form-search { width:98%; }
 		.list {
-			margin:0;
+			margin:0 0 20px 0;
 			padding:0;
 			width:100%;
 			height:100%;
@@ -109,7 +111,7 @@
 				$('#search-input').search({
 					list:          $('#awesome-list'),
 					disableSubmit: true
-				}).focus();
+				});
 			});
 		</script>
 
