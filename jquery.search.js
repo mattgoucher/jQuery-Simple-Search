@@ -61,6 +61,8 @@
                 var item = $(this);
                 if ( !regex.test(item.data('search')) ) {
                     item.hide();
+                }else{
+                    item.show();
                 }
             });
 
