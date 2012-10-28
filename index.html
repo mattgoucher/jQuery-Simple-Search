@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery Simple Search</title>
+	</head>
+	<body>
+
+		<h2>Try searching for a nice dessert!</h2>
+
+		<form id="search-form">
+			<input type="text" id="search-input">
+		</form>
+
+		<ul id="awesome-list">
+			<li class="item" data-search="pie pumpkin">Pumpkin Pie</li>
+			<li class="item" data-search="pie cherry">Cherry Pie</li>
+			<li class="item" data-search="cake cheese">Cheese Cake</li>
+			<li class="item" data-search="donut maple">Maple Donut</li>
+			<li class="item" data-search="Aloo pie">Aloo pie</li>
+			<li class="item" data-search="Apple pie">Apple pie</li>
+			<li class="item" data-search="Apple crisp">Apple crisp</li>
+			<li class="item" data-search="Apple crumble">Apple crumble</li>
+			<li class="item" data-search="Australian and New Zealand meat pie">Australian and New Zealand meat pie</li>
+			<li class="item" data-search="Bacon and egg pie">Bacon and egg pie</li>
+			<li class="item" data-search="Bakewell tart">Bakewell tart</li>
+			<li class="item" data-search="Banana Cream Pie">Banana Cream Pie</li>
+			<li class="item" data-search="Banoffee pie">Banoffee pie</li>
+			<li class="item" data-search="Chicken and mushroom pie">Chicken and mushroom pie</li>
+			<li class="item" data-search="Chinese pie">Chinese pie</li>
+			<li class="item" data-search="Pâté chinois">Pâté chinois</li>
+			<li class="item" data-search="Coconut Cream Pie">Coconut Cream Pie</li>
+			<li class="item" data-search="Cookie Cake Pie">Cookie Cake Pie</li>
+			<li class="item" data-search="Corned beef pie">Corned beef pie</li>
+			<li class="item" data-search="Cottage pie">Cottage pie</li>
+			<li class="item" data-search="Shepherd's pie">Shepherd's pie</li>
+			<li class="item" data-search="Coulibiac">Coulibiac</li>
+			<li class="item" data-search="Cumberland pie">Cumberland pie</li>
+			<li class="item" data-search="Curry pie">Curry pie</li>
+			<li class="item" data-search="Curry puff">Curry puff</li>
+			<li class="item" data-search="Custard tart">Custard tart</li>
+			<li class="item" data-search="Derby pie">Derby pie</li>
+			<li class="item" data-search="Empanada">Empanada</li>
+			<li class="item" data-search="Fish pie">Fish pie</li>
+			<li class="item" data-search="Fisherman's Pie">Fisherman's Pie</li>
+			<li class="item" data-search="Flan">Flan</li>
+			<li class="item" data-search="Flapper pie">Flapper pie</li>
+			<li class="item" data-search="Fleischkuekle">Fleischkuekle</li>
+			<li class="item" data-search="Fried pie">Fried pie</li>
+		</ul>
+
+		<script src="http://code.jquery.com/jquery-1.8.2.js" type="text/javascript"></script>
+		<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js" type="text/javascript"></script>
+		<script src="jquery.data.search.js" type="text/javascript"></script>
+
+		<script type="text/javascript">
+			$(function(){
+				$('#search-input').search({
+					listItems:     $('#awesome-list .item'),
+					disableSubmit: true
+				}).focus();
+			});
+		</script>
+
+	</body>
+</html>
