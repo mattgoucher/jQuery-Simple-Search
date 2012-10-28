@@ -3,51 +3,102 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>jQuery Simple Search</title>
+
+		<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap-combined.min.css" rel="stylesheet">
+		<style type="text/css">
+		.span6 {
+ 		   margin:0 auto;
+ 		   float:none;
+		}
+		.form-search { width:98%; }
+		.list {
+			margin:0;
+			padding:0;
+			width:100%;
+			height:100%;
+			max-height:540px;
+			overflow-y:scroll;
+			list-style:none;
+			border:1px solid #ccc;
+		}
+		.list .item {
+			padding:10px;
+			background:;
+		}
+		.list .item:hover {
+			cursor:pointer;
+			font-weight:bold;
+			background:#D9EDF7;
+		}
+		.fork-me {
+			position:absolute;
+			top:0; right:0;
+			display:block;
+			width:149px;
+			height:149px;
+			background:url(https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png) center top no-repeat;
+			text-indent:-999em;
+		}
+		@media screen and (max-width:768px) {
+			.fork-me { display:none; }
+		}
+		</style>
 	</head>
 	<body>
 
-		<h2>Try searching for a nice dessert!</h2>
+		<a href="http://github.com/mattgoucher/jquery-simple-search" class="fork-me">
+			Fork me on GitHub
+		</a>
 
-		<form id="search-form">
-			<input type="text" id="search-input">
-		</form>
+		<div class="span6">
 
-		<ul id="awesome-list">
-			<li class="item" data-search="pie pumpkin">Pumpkin Pie</li>
-			<li class="item" data-search="pie cherry">Cherry Pie</li>
-			<li class="item" data-search="cake cheese">Cheese Cake</li>
-			<li class="item" data-search="donut maple">Maple Donut</li>
-			<li class="item" data-search="Aloo pie">Aloo pie</li>
-			<li class="item" data-search="Apple pie">Apple pie</li>
-			<li class="item" data-search="Apple crisp">Apple crisp</li>
-			<li class="item" data-search="Apple crumble">Apple crumble</li>
-			<li class="item" data-search="Australian and New Zealand meat pie">Australian and New Zealand meat pie</li>
-			<li class="item" data-search="Bacon and egg pie">Bacon and egg pie</li>
-			<li class="item" data-search="Bakewell tart">Bakewell tart</li>
-			<li class="item" data-search="Banana Cream Pie">Banana Cream Pie</li>
-			<li class="item" data-search="Banoffee pie">Banoffee pie</li>
-			<li class="item" data-search="Chicken and mushroom pie">Chicken and mushroom pie</li>
-			<li class="item" data-search="Chinese pie">Chinese pie</li>
-			<li class="item" data-search="Pâté chinois">Pâté chinois</li>
-			<li class="item" data-search="Coconut Cream Pie">Coconut Cream Pie</li>
-			<li class="item" data-search="Cookie Cake Pie">Cookie Cake Pie</li>
-			<li class="item" data-search="Corned beef pie">Corned beef pie</li>
-			<li class="item" data-search="Cottage pie">Cottage pie</li>
-			<li class="item" data-search="Shepherd's pie">Shepherd's pie</li>
-			<li class="item" data-search="Coulibiac">Coulibiac</li>
-			<li class="item" data-search="Cumberland pie">Cumberland pie</li>
-			<li class="item" data-search="Curry pie">Curry pie</li>
-			<li class="item" data-search="Curry puff">Curry puff</li>
-			<li class="item" data-search="Custard tart">Custard tart</li>
-			<li class="item" data-search="Derby pie">Derby pie</li>
-			<li class="item" data-search="Empanada">Empanada</li>
-			<li class="item" data-search="Fish pie">Fish pie</li>
-			<li class="item" data-search="Fisherman's Pie">Fisherman's Pie</li>
-			<li class="item" data-search="Flan">Flan</li>
-			<li class="item" data-search="Flapper pie">Flapper pie</li>
-			<li class="item" data-search="Fleischkuekle">Fleischkuekle</li>
-			<li class="item" data-search="Fried pie">Fried pie</li>
-		</ul>
+			<blockquote>
+				<h3> jQuery Simple Search</h3>
+				<small>A simple jQuery plugin for filtering through elements that match a specified search parameter.</small>
+			</blockquote>
+
+			<form id="search-form">
+				<input type="text" id="search-input" class="form-search input-xxlarge" placeholder="Search for a dessert">
+			</form>
+
+			<ul id="awesome-list" class="list">
+				<li class="item" data-search="pie pumpkin">Pumpkin Pie</li>
+				<li class="item" data-search="pie cherry">Cherry Pie</li>
+				<li class="item" data-search="cake cheese">Cheese Cake</li>
+				<li class="item" data-search="donut maple">Maple Donut</li>
+				<li class="item" data-search="Aloo pie">Aloo pie</li>
+				<li class="item" data-search="Apple pie">Apple pie</li>
+				<li class="item" data-search="Apple crisp">Apple crisp</li>
+				<li class="item" data-search="Apple crumble">Apple crumble</li>
+				<li class="item" data-search="Australian and New Zealand meat pie">Australian and New Zealand meat pie</li>
+				<li class="item" data-search="Bacon and egg pie">Bacon and egg pie</li>
+				<li class="item" data-search="Bakewell tart">Bakewell tart</li>
+				<li class="item" data-search="Banana Cream Pie">Banana Cream Pie</li>
+				<li class="item" data-search="Banoffee pie">Banoffee pie</li>
+				<li class="item" data-search="Chicken and mushroom pie">Chicken and mushroom pie</li>
+				<li class="item" data-search="Chinese pie">Chinese pie</li>
+				<li class="item" data-search="Pâté chinois">Pâté chinois</li>
+				<li class="item" data-search="Coconut Cream Pie">Coconut Cream Pie</li>
+				<li class="item" data-search="Cookie Cake Pie">Cookie Cake Pie</li>
+				<li class="item" data-search="Corned beef pie">Corned beef pie</li>
+				<li class="item" data-search="Cottage pie">Cottage pie</li>
+				<li class="item" data-search="Shepherd's pie">Shepherd's pie</li>
+				<li class="item" data-search="Coulibiac">Coulibiac</li>
+				<li class="item" data-search="Cumberland pie">Cumberland pie</li>
+				<li class="item" data-search="Curry pie">Curry pie</li>
+				<li class="item" data-search="Curry puff">Curry puff</li>
+				<li class="item" data-search="Custard tart">Custard tart</li>
+				<li class="item" data-search="Derby pie">Derby pie</li>
+				<li class="item" data-search="Empanada">Empanada</li>
+				<li class="item" data-search="Fish pie">Fish pie</li>
+				<li class="item" data-search="Fisherman's Pie">Fisherman's Pie</li>
+				<li class="item" data-search="Flan">Flan</li>
+				<li class="item" data-search="Flapper pie">Flapper pie</li>
+				<li class="item" data-search="Fleischkuekle">Fleischkuekle</li>
+				<li class="item" data-search="Fried pie">Fried pie</li>
+			</ul>
+
+		</div>
 
 		<script src="http://code.jquery.com/jquery-1.8.2.js" type="text/javascript"></script>
 		<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js" type="text/javascript"></script>
